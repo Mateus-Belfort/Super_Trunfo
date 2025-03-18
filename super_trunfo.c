@@ -26,16 +26,16 @@ int main(){
   //Dados carta 01
 
   printf("\nCarta 01\n==============================================\nDigite a Inicial da cidade (Ex:A-H): ");
-  scanf(" %c", &carta1);
+  scanf(" %c", &carta1); //o espaço antes do % evita erros no buffer
 
   printf("Digite o código da cidade (Ex:A01): ");
-  scanf("%s", cod_carta1);
+  scanf("%s", cod_carta1); //recebe string sem espaçamento
 
   printf("Digite o nome da cidade: ");
-  scanf(" %[^\n]", nome_cidade1);
+  scanf(" %[^\n]", nome_cidade1);  //recebe o nome completo da cidade com qualquer caractere
 
   printf("Digite o número da população na cidade: ");
-  scanf("%d", &populacao1);
+  scanf("%d", &populacao1); //recebe um numero inteiro para calculo
 
   printf("Digite a área da cidade: ");
   scanf("%f", &area1);
@@ -46,7 +46,7 @@ int main(){
   printf("existem quantos pontos turísticos na cidade: ");
   scanf("%d", &pontos_turismo1);
 
-  densidade1 = populacao1 / area1;
+  densidade1 = populacao1 / area1; // calculo após receber os dados para base da divisão
   percapta1 = populacao1 / pib1;
 
 
@@ -78,7 +78,7 @@ int main(){
 
   //Dados primeira carta
 
-  printf("\n==============================================\nCarta 1:\n==============================================\n");
+  printf("\n==============================================\nCarta 1:\n==============================================\n"); //inserido estilização com simbolo de = para melhor visualização
   printf("Inicial: %c\n", carta1);
   printf("Código da cidade: %s\n", cod_carta1);
   printf("Nome: %s\n", nome_cidade1);
