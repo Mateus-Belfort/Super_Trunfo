@@ -137,15 +137,15 @@ int main(){
 
   if (populacao1 > populacao2)
   {
-    populacao_maior =printf("Carta 01 -venceu (1)");
+    populacao_maior = printf("Resultado: Carta 01 - %s venceu (1)", nome_cidade1);
   }else{
-    populacao_maior = printf("Carta 02 - venceu (0)");
+    populacao_maior = printf("Resultado: Carta 02 - %s venceu (0)", nome_cidade2);
 
   return(populacao_maior);
   };
 
 
-  printf(" %[^\n]",populacao_maior);
+  printf(populacao_maior);
   
 
 
