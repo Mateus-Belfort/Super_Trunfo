@@ -55,8 +55,8 @@ int main(){
   scanf("%d", &pontos_turismo1);
 
   densidade1 = populacao1 / area1; // calculo após receber os dados para base da divisão
-  percapta1 = populacao1 / pib1;
-  poder1 = (float) populacao1 + area1 + pib1 + pontos_turismo1 + densidade1 + percapta1;
+  percapta1 = pib1 / populacao1 ; // calculo da renda per capta populacional
+  poder1 = (float) populacao1 + area1 + pib1 + pontos_turismo1 + percapta1; // soma de todos os valores para obter o super poder
 
 
   //Dados carta 02
@@ -137,20 +137,12 @@ int main(){
 
   if (populacao1 > populacao2)
   {
-    populacao_maior = printf("Resultado: Carta 01 - %s venceu (1)", nome_cidade1);
+    printf("Resultado: Carta 01 - %s venceu (1)", nome_cidade1);
   }else{
-    populacao_maior = printf("Resultado: Carta 02 - %s venceu (0)", nome_cidade2);
-
-  return(populacao_maior);
+    printf("Resultado: Carta 02 - %s venceu (0)", nome_cidade2);
   };
 
-
-  printf(populacao_maior);
-  
-
-
- 
-
+  printf("\n===================================================================================================================\n");
 
   return (0);
 }
